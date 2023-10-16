@@ -1,4 +1,5 @@
-# Step 4 count the cars
+import cv2
+import numpy as np
 cap=cv2.VideoCapture('video.mp4')
 
 # line position
