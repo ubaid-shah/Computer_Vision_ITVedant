@@ -1,0 +1,16 @@
+I see steps are scattered in different answers. Based on my recent experience with this pytesseract error on Windows, writing different steps in sequence to make it easier to resolve the error:
+
+1. Install tesseract using windows installer available at: https://github.com/UB-Mannheim/tesseract/wiki
+
+2. Note the tesseract path from the installation. Default installation path at the time of this edit was: "C:/OCR/Tesseract-OCR". It may change so please check the installation path. Set the path in the environment variables.
+
+3. pip install pytesseract
+
+4. pip install tesseract
+
+5. copy "eng.traineddata" file from "C:\Program Files\Tesseract-OCR\tessdata" and paste it in "C:\Program Files\Tesseract-OCR"
+
+6.[optional]:
+Add this line to your python script every time
+
+pytesseract.pytesseract.tesseract_cmd = 'C:/OCR/Tesseract-OCR/tesseract.exe'
